@@ -1,0 +1,11 @@
+title: Sticky Notes Extension
+version: 0.0.1
+description: Simple extension to show tutorial sticky nodes
+author: Georg Zoeller
+origin: https://github.com/georgzoeller/omni-extension-sticky
+client:
+  addToWorkbench: false
+  displayMode: floating
+
+
+

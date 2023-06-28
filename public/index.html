@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<header>
+  <link rel="stylesheet" href="./sticky.css">
+</header>
+<body>
+
+<div class="sticky-container">
+  <div class="sticky-outer">
+    <div class="sticky">
+      <svg width="0" height="0">
+        <defs>
+          <clipPath id="stickyClip" clipPathUnits="objectBoundingBox">
+            <path
+              d="M 0 0 Q 0 0.69, 0.03 0.96 0.03 0.96, 1 0.96 Q 0.96 0.69, 0.96 0 0.96 0, 0 0"
+              stroke-linejoin="round"
+              stroke-linecap="square"
+            />
+          </clipPath>
+        </defs>
+      </svg>
+
+      <div class="sticky-content" id="sticky-content">
+          Loading...
+      </div>
+    </div>
+  </div>
+
+</div>
+<script>
+  const args = new URLSearchParams(location.search)
+    const params = JSON.parse(args.get('q')||"{}")
+
+    if (params.text) {
+      document.getElementById('sticky-content').innerText = params.text
+    }
+    else if (params.html)
+    {
+      document.getElementById('sticky-content').innerHTML = params.html
+    }
+
+
+</script>
+</body>
+
+</html>
